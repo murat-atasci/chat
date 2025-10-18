@@ -1,0 +1,23 @@
+{
+  "name": "PHP 7.2 + Apache",
+  "build": { "dockerfile": "Dockerfile" },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "forwardPorts": [80],
+  "portsAttributes": {
+    "80": { "label": "Apache (PHP 7.2)", "onAutoForward": "openBrowser" }
+  },
+  "postStartCommand": "rm -rf /var/www/html && ln -s ${containerWorkspaceFolder} /var/www/html",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-pack",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
