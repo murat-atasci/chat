@@ -1,0 +1,10 @@
+vendor/
+node_modules/
+.env
+.env.*
+composer.lock
+npm-debug.log*
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
